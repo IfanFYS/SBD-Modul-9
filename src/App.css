@@ -1,0 +1,268 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+/* Rest of existing styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Add this to enable more advanced animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+  50% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.6); }
+}
+
+/* Add custom animation classes */
+.btn-hover-grow {
+  transition: all 0.2s ease;
+}
+.btn-hover-grow:hover {
+  transform: scale(1.05);
+}
+.btn-hover-grow:active {
+  transform: scale(0.98);
+}
+
+.btn-hover-shadow {
+  transition: all 0.3s ease;
+}
+.btn-hover-shadow:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.btn-hover-shadow:active {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+.btn-hover-bounce:hover {
+  animation: bounce 0.5s ease infinite;
+}
+
+.btn-hover-pulse:hover {
+  animation: pulse 1s ease infinite;
+}
+
+.btn-hover-glow:hover {
+  animation: glow 1.5s ease infinite;
+}
+
+.btn-hover-wiggle:hover {
+  animation: wiggle 0.5s ease infinite;
+}
+
+.btn-hover-slide {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-hover-slide:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+  z-index: -1;
+}
+
+.btn-hover-slide:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.btn-click-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-click-ripple:after {
+  content: "";
+  background: rgba(255, 255, 255, 0.3);
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  padding-top: 240%;
+  padding-left: 240%;
+  margin-top: -120%;
+  margin-left: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.btn-click-ripple:active:after {
+  padding-top: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-left: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* Fix for floating particles and animation issues */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Add a continuous animation that runs independently */
+@keyframes continuous-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) translateX(10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-30px) translateX(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-15px) translateX(-10px) rotate(-5deg);
+  }
+}
+
+/* Improved spin animation that continues regardless of other states */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite !important;
+  animation-play-state: running !important;
+}
+
+/* Hardware acceleration for particles to prevent jittering */
+.fixed.inset-0 div {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
+}
+
+/* Ensure particles keep animating regardless of other states */
+.particle-element {
+  animation: continuous-float 15s infinite ease-in-out !important;
+  animation-play-state: running !important;
+}
+
+/* Fixed animation classes to ensure they run independently */
+.animate-bounce {
+  animation: bounce 1s infinite !important;
+  animation-play-state: running !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+  animation-play-state: running !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Stabilize the counter container and buttons */
+.counter-container {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  isolation: isolate;
+}
+
+/* Add stability to interactive elements */
+button, a {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Ensure smooth transitions */
+.transition-all {
+  will-change: transform, opacity;
+}
+
+/* Prevent animation-related layout thrashing */
+.transform {
+  will-change: transform;
+}
+
+/* Force all animations to run independently */
+* {
+  animation-play-state: running !important;
+}
+
+/* Ensure typewriter cursor continues to blink */
+.cursor-blink {
+  animation: blink 1s step-end infinite !important;
+  animation-play-state: running !important;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
