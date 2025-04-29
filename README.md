@@ -1,8 +1,8 @@
-# TP SBD 9 - Interactive Frontend Showcase
+# **TP SBD 9 - Advanced Frontend ⚛️**
 
-This project is an interactive frontend application built for the 9th module preliminary assignment of the Database Systems practicum at [Your University/Institution Name - *Optional*]. It demonstrates various React concepts and modern web development techniques using Vite and Tailwind CSS.
+This project is an interactive frontend application built for the 9th module preliminary assignment of the Database Systems practicum at Computer Engineering curriculum in Universitas Indonesia. It demonstrates various React concepts and modern web development techniques using Vite and Tailwind CSS.
 
-## Features
+## **Features**
 
 *   **Responsive Design:** Adapts to different screen sizes with a mobile-friendly burger menu.
 *   **Fixed Navigation Bar:** Stays at the top while scrolling, featuring:

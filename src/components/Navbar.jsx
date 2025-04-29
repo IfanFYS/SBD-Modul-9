@@ -100,7 +100,7 @@ const Navbar = ({ darkMode, setDarkMode, soundEnabled, setSoundEnabled, scrollTo
             {/* Dark Mode Toggle */}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              className="p-2 rounded-full bg-gray-200 dark:bg-blue-900 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-blue-800 transition-colors"
               aria-label="Toggle Dark Mode"
             >
               {darkMode ? (
@@ -171,7 +171,7 @@ const Navbar = ({ darkMode, setDarkMode, soundEnabled, setSoundEnabled, scrollTo
             <div className="md:hidden">
               <button
                 onClick={handleMobileMenuToggle}
-                className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                 aria-label="Open main menu"
                 aria-expanded={isMobileMenuOpen}
               >
